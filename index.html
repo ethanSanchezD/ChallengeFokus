@@ -5,6 +5,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Fokus</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
     </head>
 
@@ -15,16 +18,25 @@
 
                 <div class="container-fokus">
                     <div class="text-container">
-                        <h1>Optimiza tu productividad,
-                            <span>sumérgete en lo que importa</span>
+                        <h1 class="text">Maximize your productivity,
+                            <span class="text-continuation">immerse yourself in what matters</span>
                         </h1>
                     </div>
                     <div class="container-timer">
 
                         <div class="buttons-fokus">
-                            <button id="boton fokus">Botón 1</button>
-                            <button id="boton short-break">Botón 2</button>
-                            <button id="boton long-break">Botón 3</button>
+                            <button class="button-fokus" id="button fokus">
+                                <span>Focus</span>
+                                <span></span>
+                            </button>
+                            <button class="button-fokus" id="button short-break">
+                                <span>Short break</span>
+                                <span></span>
+                            </button>
+                            <button class="button-fokus" id="button long-break">
+                                <span>Long break</span>
+                                <span></span>
+                            </button>
                         </div>
 
                         <!-- Centro con el temporizador -->
@@ -34,13 +46,15 @@
 
                         <!-- Parte inferior con un botón de inicio -->
                         <div class="button-start-container">
-                            <button id="button-start">Iniciar Proceso</button>
+                            <button class="button-fokus" id="button-start">Start</button>
                         </div>
                     </div>
 
                 </div>
 
             </div>
+            <footer class="footer">Made by Ethan Sanchez</footer>
+
         </div>
         <script src="js/main.js"></script>
     </body>
