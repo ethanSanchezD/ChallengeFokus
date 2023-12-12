@@ -9,6 +9,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -40,8 +43,8 @@
                         </div>
 
                         <!-- Centro con el temporizador -->
-                        <div class="timer-countdown">
-                            <div id="timer">00:00:00</div>
+                        <div class="timer-countdown-container">
+                            <h1 class="timer-countdown" id="timer"></h1>
                         </div>
 
                         <!-- Parte inferior con un botón de inicio -->
@@ -53,9 +56,22 @@
                 </div>
 
             </div>
-            <footer class="footer">Made by Ethan Sanchez</footer>
+            <div class="timer-ends-message-container" id="timer-message"
+                style="display: none; text-align: center; font-size: 24px;">
+                <div class="timer-ends-message">
+                    <h1>Times up!</h1>
+                    <button class="button-fokus" id="close-button-timesup">Close</button>
+                </div>
+
+            </div>
+
+
+            <footer class=" footer">Made by Ethan Sanchez</footer>
 
         </div>
+
+        <audio id="timer-end-tone" src="sounds/timer-end.mp3" preload="auto"></audio>
+
         <script src="js/main.js"></script>
     </body>
 

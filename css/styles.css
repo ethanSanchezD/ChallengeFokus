@@ -65,8 +65,8 @@ body::before {
 .text {
     color: #FFF;
 
-    font-family: 'Lora', serif;
-    font-size: 50px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 45px;
     font-style: normal;
     font-weight: 150;
     line-height: 150%;
@@ -74,8 +74,8 @@ body::before {
 
 .text-continuation {
     color: #FFF;
-    font-family: 'Lora', serif;
-    font-size: 51px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 47px;
     font-style: normal;
     font-weight: 700;
     line-height: 150%;
@@ -150,9 +150,60 @@ body::before {
     opacity: 1;
 }
 
-.footer {
+.timer-countdown {
     color: #FFF;
-    font-family: 'Lora', serif;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+.timer-ends-message {
+    display: flex;
+    width: 450px;
+    height: 300px;
+    padding: 25px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-radius: 32px;
+    border: 1px solid var(--Azul-royal, #361480);
+    background: rgba(47, 20, 128, 0.8);
+}
+
+#timer-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#close-button-timesup {
+    background-color: #1f63c3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.footer {
+    color: #aab1dc;
+    font-family: 'Orbitron', sans-serif;
     font-weight: 200;
     font-size: 12px;
     margin-top: 2.6rem;
