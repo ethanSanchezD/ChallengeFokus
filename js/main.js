@@ -7,9 +7,12 @@ var buttonLongBreak = document.getElementById('button long-break');
 var timerMessage = document.getElementById('timer-message');
 var closeButtonTimesEnd = document.getElementById('close-button-timesup');
 
+var restartButton = document.getElementById('restart-button');
+
 var sound = document.getElementById('timer-end-tone');
 
 var secondsInterval = 1500;
+setUpRestartButton(secondsInterval);
 var intervalId = null;
 buttonFokus.style.backgroundColor = '#2196F3';
 buttonFokus.style.color = '#ffffff';
@@ -37,6 +40,18 @@ function setupCloseButton() {
     closeButtonTimesEnd.addEventListener('click', closeMessageBox);
 }
 
+function setUpRestartButton(seconds) {
+
+    restartButton.addEventListener('click', () => {
+        closeInterval();
+        resetTimerMessage();
+        setButtonTimer(seconds);
+        restartButton.style.display = 'none';
+    });
+
+
+}
+
 function countDown() {
     if (secondsInterval <= 0) {
         closeInterval();
@@ -45,11 +60,12 @@ function countDown() {
         showTimerCountdown();
         timerMessage.style.display = 'flex';
 
+
         setupCloseButton();
 
         return;
     }
-    console.log(secondsInterval);
+
     secondsInterval--;
     showTimerCountdown();
 
@@ -65,6 +81,7 @@ function startPauseTimer() {
         closeInterval();
         return;
     }
+    restartButton.style.display = 'inline';
     timerStartButton.textContent = 'Pause';
     intervalId = setInterval(countDown, 1000);
 
@@ -90,7 +107,7 @@ function showTimerCountdown() {
 
 function resetButtonStyle(button) {
     button.style.backgroundColor = 'inherit';
-    button.style.color = '#ffffff40';
+    button.style.color = '#ffffff93';
 
 }
 
@@ -101,26 +118,28 @@ function resetAllButtonsStyles() {
     resetButtonStyle(buttonLongBreak);
 }
 
+function setUpButtonsInTimer(seconds, button) {
+    setButtonTimer(seconds)
+    resetAllButtonsStyles();
+    button.style.backgroundColor = '#2196F3';
+    button.style.color = '#ffffff';
+    setUpRestartButton(seconds);
+
+}
 // Añadir estilos a los botones cuando se hace clic
 buttonFokus.addEventListener('click', () => {
-    setButtonTimer(1500)
-    resetAllButtonsStyles();
-    buttonFokus.style.backgroundColor = '#2196F3';
-    buttonFokus.style.color = '#ffffff';
+    secondsInterval = 1500;
+    setUpButtonsInTimer(secondsInterval, buttonFokus);
 });
 
 buttonShortBreak.addEventListener('click', () => {
-    setButtonTimer(300)
-    resetAllButtonsStyles();
-    buttonShortBreak.style.backgroundColor = '#2196F3';
-    buttonShortBreak.style.color = '#ffffff';
+    secondsInterval = 300;
+    setUpButtonsInTimer(secondsInterval, buttonShortBreak);
 });
 
 buttonLongBreak.addEventListener('click', () => {
-    setButtonTimer(900)
-    resetAllButtonsStyles();
-    buttonLongBreak.style.backgroundColor = '#2196F3';
-    buttonLongBreak.style.color = '#ffffff';
+    secondsInterval = 900;
+    setUpButtonsInTimer(secondsInterval, buttonLongBreak);
 });
 
 
