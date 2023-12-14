@@ -31,7 +31,7 @@ body::before {
 .main {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    min-height: 100%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -54,8 +54,8 @@ body::before {
 
 .text-container {
     display: flex;
-    width: 490px;
-    height: 402px;
+    max-width: 490px;
+    min-height: 402px;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
@@ -83,8 +83,8 @@ body::before {
 
 .container-timer {
     display: flex;
-    width: 500px;
-    height: 300px;
+    min-width: 500px;
+    min-height: 300px;
     padding: 25px;
     flex-direction: column;
     justify-content: center;
@@ -110,8 +110,8 @@ body::before {
     background-color: inherit;
     border-radius: 100px;
     font-weight: 600;
-    color: #ffffff40;
-    box-shadow: 0 0 0 2px #ffffff20;
+    color: #ffffff93;
+    box-shadow: 0 0 0 2px #ffffff82;
     cursor: pointer;
     overflow: hidden;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
@@ -150,6 +150,27 @@ body::before {
     opacity: 1;
 }
 
+.restart-image {
+    display: none;
+    position: absolute;
+    margin-top: 0.5rem;
+    margin-left: 4rem;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.restart-image:hover {
+    transform: scale(1.1);
+    transition: transform 0.1s ease-in-out;
+}
+
+
+.restart-image:active {
+    transform: scale(0.9);
+    transition: transform 0.1s ease-in-out;
+}
+
 .timer-countdown {
     color: #FFF;
     text-align: center;
@@ -163,8 +184,8 @@ body::before {
 
 .timer-ends-message {
     display: flex;
-    width: 450px;
-    height: 300px;
+    max-width: 450px;
+    min-height: 300px;
     padding: 25px;
     flex-direction: column;
     justify-content: center;
@@ -207,4 +228,50 @@ body::before {
     font-weight: 200;
     font-size: 12px;
     margin-top: 2.6rem;
+}
+
+@media (max-width: 1000px) {
+    .container-fokus {
+        flex-direction: column;
+    }
+
+
+}
+
+@media(max-width: 500px) {
+    .body-container {
+        padding-top: 0;
+    }
+
+    .text-container {
+        max-width: 260px;
+        min-height: 215px;
+    }
+
+    .text {
+        font-size: 25px;
+    }
+
+    .text-continuation {
+        font-size: 27px;
+    }
+
+    .container-timer {
+        min-width: 350px;
+        min-height: 90px;
+    }
+
+    .buttons-fokus {
+        justify-content: space-between;
+    }
+
+    .button-fokus {
+        padding: 12px 17px;
+        font-size: 12px;
+    }
+
+    .footer {
+        font-size: 10px;
+        margin-top: 2rem;
+    }
 }
