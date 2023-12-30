@@ -15,7 +15,7 @@ body {
 }
 
 body::before {
-    background-image: url("../images/background-lineas.png");
+    background-image: url("../images/background-figures2.png");
     background-repeat: no-repeat;
     background-position: right;
     content: "";
@@ -110,8 +110,8 @@ body::before {
     background-color: inherit;
     border-radius: 100px;
     font-weight: 600;
-    color: #ffffff93;
-    box-shadow: 0 0 0 2px #ffffff82;
+    color: #ffffffb7;
+    box-shadow: 0 0 0 2px #ffffff87;
     cursor: pointer;
     overflow: hidden;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
@@ -124,7 +124,7 @@ body::before {
     transform: translate(-50%, -50%);
     width: 20px;
     height: 20px;
-    background-color: #2196F3;
+    background-color: #6721f3;
     border-radius: 50%;
     opacity: 0;
     transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
@@ -136,7 +136,7 @@ body::before {
 }
 
 .button-fokus:hover {
-    box-shadow: 0 0 0 5px #2195f360;
+    box-shadow: 0 0 0 5px #6421f360;
     color: #ffffff;
 }
 

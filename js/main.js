@@ -14,7 +14,7 @@ var sound = document.getElementById('timer-end-tone');
 var secondsInterval = 1500;
 setUpRestartButton(secondsInterval);
 var intervalId = null;
-buttonFokus.style.backgroundColor = '#2196F3';
+buttonFokus.style.backgroundColor = '#6721f3';
 buttonFokus.style.color = '#ffffff';
 
 timerStartButton.addEventListener('click', startPauseTimer);
@@ -121,7 +121,7 @@ function resetAllButtonsStyles() {
 function setUpButtonsInTimer(seconds, button) {
     setButtonTimer(seconds)
     resetAllButtonsStyles();
-    button.style.backgroundColor = '#2196F3';
+    button.style.backgroundColor = '#6721f3';
     button.style.color = '#ffffff';
     setUpRestartButton(seconds);
 
