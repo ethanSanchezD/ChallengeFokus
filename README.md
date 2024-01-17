@@ -147,7 +147,7 @@ Project Link: https://github.com/ethanSanchezD/ChallengeFokus
 ## Acknowledgments
 
 * Thanks to [Alura-Latam](https://www.aluracursos.com/?gclid=CjwKCAjwtuOlBhBREiwA7agf1rdySFIHX-ybAQ678Q779VPf4w5GhYMG21A5x9yPvKdORnMzIWK3DBoC6UAQAvD_BwE)
-  and [Oracle](https://www.oracle.com/mx/) for give me the oportunity of being part of this FrontEnd BootCamp, every day I am leraning something knew and getting closer to my goals.  
+  for give me the oportunity of being part of this FrontEnd BootCamp, every day I am leraning something knew and getting closer to my goals.  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
